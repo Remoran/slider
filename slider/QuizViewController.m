@@ -17,6 +17,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.labelText.text = @"0.500000";
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -24,6 +25,12 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)valueChanged:(id)sender {
+    UISlider *slider = (UISlider *)sender;
+    float sliderValue = slider.value;
+    self.labelText.text = [NSString stringWithFormat:@"%f", sliderValue];
 }
 
 @end

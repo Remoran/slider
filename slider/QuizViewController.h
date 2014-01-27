@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface QuizViewController : UIViewController
+- (IBAction)valueChanged:(id)sender;
+
+
+@property (weak, nonatomic) IBOutlet UILabel *labelText;
+@property (weak, nonatomic) IBOutlet UISlider *slider;
 
 @end
